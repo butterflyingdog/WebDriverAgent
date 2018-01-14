@@ -7,24 +7,10 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-.section.second .section-content-container {
-  padding-top: 0px;
-}
+#import <XCTest/XCTest.h>
 
-.tree-container {
-  overflow-y: auto;
-  max-height: 600px;
-}
+@interface XCUICoordinate (FBFix)
 
-.tree-header {
-  height: 25px;
-}
+- (CGPoint)fb_screenPoint;
 
-.tree-node {
-  font-family: monospace;
-  cursor: pointer;
-}
-
-.tree-node.selected {
-  background-color: #D690A0;
-}
+@end
