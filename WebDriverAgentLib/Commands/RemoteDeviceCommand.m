@@ -9,6 +9,7 @@
  
 
 #import "RemoteDeviceCommand.h"
+#import "XCUIDevice+FBHelpers.h"
 
 #import "FBApplication.h"
 #import "FBSession.h"
@@ -19,7 +20,7 @@
 
 #import "FBMacros.h"
 
-#import "XCUIDevice+FBHelpers.h"
+
 #import "XCUIElement+FBWebDriverAttributes.h"
 
 #import "XCEventGenerator.h"
@@ -166,9 +167,13 @@
 + (UIImage *)getScaledScreenshotImage:(CGFloat)imagex InterpolationQuality:(CGInterpolationQuality )interpolationQuality
 {
   // get screenshot png image
-    CGFloat imagey=0.0f;
-  NSData* screenshotData = [XCUIDevice sharedDevice].fb_screenshot ;
+  CGFloat imagey=0.0f;
+  NSError *error;
+  NSData* screenshotData =[[XCUIDevice sharedDevice] fb_screenshotWithError:&error];
   
+  if (nil == screenshotData) {
+    return nil;
+  }
   // store png image to UIImage
   UIImage *image    = [UIImage imageWithData: screenshotData];
   UIImage *scaledImage =image ;
