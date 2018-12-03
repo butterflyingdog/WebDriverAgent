@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		18033EFF208761FC00FED81D /* RoutingHTTPServer.framework in Copy frameworks */ = {isa = PBXBuildFile; fileRef = AD42DD2B1CF1238500806E5D /* RoutingHTTPServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FC3B2E32121ECF600B61EE0 /* FBApplicationProcessProxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B2E12121EC8C00B61EE0 /* FBApplicationProcessProxyTests.m */; };
+		4D1EEEB121B4D16200AA926D /* RemoteDeviceCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1EEEAF21B4D16200AA926D /* RemoteDeviceCommand.h */; };
+		4D1EEEB221B4D16200AA926D /* RemoteDeviceCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EEEB021B4D16200AA926D /* RemoteDeviceCommand.m */; };
 		711084441DA3AA7500F913D6 /* FBXPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 711084421DA3AA7500F913D6 /* FBXPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		711084451DA3AA7500F913D6 /* FBXPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 711084431DA3AA7500F913D6 /* FBXPath.m */; };
 		7119E1EC1E891F8600D0B125 /* FBPickerWheelSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7119E1EB1E891F8600D0B125 /* FBPickerWheelSelectTests.m */; };
@@ -415,6 +417,8 @@
 /* Begin PBXFileReference section */
 		1FC3B2E12121EC8C00B61EE0 /* FBApplicationProcessProxyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBApplicationProcessProxyTests.m; sourceTree = "<group>"; };
 		44757A831D42CE8300ECF35E /* XCUIDeviceRotationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCUIDeviceRotationTests.m; sourceTree = "<group>"; };
+		4D1EEEAF21B4D16200AA926D /* RemoteDeviceCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteDeviceCommand.h; sourceTree = "<group>"; };
+		4D1EEEB021B4D16200AA926D /* RemoteDeviceCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteDeviceCommand.m; sourceTree = "<group>"; };
 		711084421DA3AA7500F913D6 /* FBXPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBXPath.h; sourceTree = "<group>"; };
 		711084431DA3AA7500F913D6 /* FBXPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBXPath.m; sourceTree = "<group>"; };
 		7119E1EB1E891F8600D0B125 /* FBPickerWheelSelectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPickerWheelSelectTests.m; sourceTree = "<group>"; };
@@ -959,6 +963,8 @@
 		EE9AB74F1CAEDF0C008C271F /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				4D1EEEAF21B4D16200AA926D /* RemoteDeviceCommand.h */,
+				4D1EEEB021B4D16200AA926D /* RemoteDeviceCommand.m */,
 				EE9AB7501CAEDF0C008C271F /* FBAlertViewCommands.h */,
 				EE9AB7511CAEDF0C008C271F /* FBAlertViewCommands.m */,
 				EE9AB7521CAEDF0C008C271F /* FBCustomCommands.h */,
@@ -1447,6 +1453,7 @@
 				EE158AC21CBD456F00A3E3F0 /* FBInspectorCommands.h in Headers */,
 				EE158AF91CBD456F00A3E3F0 /* FBApplicationProcessProxy.h in Headers */,
 				EE35AD671E3B77D600A02D78 /* XCTWaiterDelegatePrivate-Protocol.h in Headers */,
+				4D1EEEB121B4D16200AA926D /* RemoteDeviceCommand.h in Headers */,
 				EE35AD4D1E3B77D600A02D78 /* XCTestManager_IDEInterface-Protocol.h in Headers */,
 				711084441DA3AA7500F913D6 /* FBXPath.h in Headers */,
 				EE35AD771E3B77D600A02D78 /* XCUIRecorderTimingMessage.h in Headers */,
@@ -1825,6 +1832,7 @@
 				EE6B64FE1D0F86EF00E85F5D /* XCTestPrivateSymbols.m in Sources */,
 				AD76723E1D6B7CC000610457 /* XCUIElement+FBTyping.m in Sources */,
 				EE158AAF1CBD456F00A3E3F0 /* XCUIElement+FBAccessibility.m in Sources */,
+				4D1EEEB221B4D16200AA926D /* RemoteDeviceCommand.m in Sources */,
 				EE158AE51CBD456F00A3E3F0 /* FBSession.m in Sources */,
 				EE158AC11CBD456F00A3E3F0 /* FBFindElementCommands.m in Sources */,
 				EE7E271D1D06C69F001BEC7B /* FBDebugLogDelegateDecorator.m in Sources */,
