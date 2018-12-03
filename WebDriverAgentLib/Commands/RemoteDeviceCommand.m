@@ -41,8 +41,11 @@
   @[
     
     [[FBRoute POST:@"/wda/quickdrag"] respondWithTarget:self action:@selector(handleQuickDrag:)],
+    [[FBRoute POST:@"/wda/quickdrag"].withoutSession respondWithTarget:self action:@selector(handleQuickDrag:)],
     
-     [[FBRoute POST:@"/wda/quicktap"] respondWithTarget:self action:@selector(handleQuickTap:)],
+    [[FBRoute POST:@"/wda/quicktap"] respondWithTarget:self action:@selector(handleQuickTap:)],
+    [[FBRoute POST:@"/wda/quicktap"].withoutSession respondWithTarget:self action:@selector(handleQuickTap:)],
+    
     [[FBRoute POST:@"/screenshotpng"].withoutSession respondWithTarget:self action:@selector(handleGetScreenshotPng:)],
     [[FBRoute POST:@"/screenshotpng"] respondWithTarget:self action:@selector(handleGetScreenshotPng:)],
     
