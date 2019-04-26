@@ -11,6 +11,7 @@
 
 #import "FBApplication.h"
 #import "FBConfiguration.h"
+#import "FBElementHitPoint.h"
 #import "FBMathUtils.h"
 #import "FBXCodeCompatibility.h"
 #import "XCElementSnapshot+FBHelpers.h"
@@ -40,7 +41,7 @@
     return [(NSNumber *)[self fb_attributeValue:FB_XCAXAIsVisibleAttribute] boolValue];
   }
   CGRect appFrame = [self fb_rootElement].frame;
-  CGSize screenSize = FBAdjustDimensionsForApplication(appFrame.size, (UIInterfaceOrientation)[XCUIDevice sharedDevice].orientation);
+  CGSize screenSize = FBAdjustDimensionsForApplication(appFrame.size, self.application.interfaceOrientation);
   CGRect screenFrame = CGRectMake(0, 0, screenSize.width, screenSize.height);
   if (!CGRectIntersectsRect(frame, screenFrame)) {
     return NO;
@@ -50,7 +51,8 @@
   if (self == hitElement || [self._allDescendants.copy containsObject:hitElement]) {
     return YES;
   }
-  if (CGRectContainsPoint(appFrame, self.fb_hitPoint)) {
+  FBElementHitPoint *hitPoint = [self fb_hitPoint:nil];
+  if (hitPoint != nil && CGRectContainsPoint(appFrame, hitPoint.point)) {
     return YES;
   }
   for (XCElementSnapshot *elementSnapshot in self.children.copy) {
